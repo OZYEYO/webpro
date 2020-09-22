@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css/">
+
+<style>
+ul#u2{
+border : 2px double dodgerblue;
+padding : 10px;
+border-left:none;
+border-right:none;
+}
+#u2 li{
+/* border : 2px double pink; */
+display : inline;
+margin : 20px;
+padding : 7px;
+letter-spacing: 5px;
+}
+.menubar li{
+display: inline;
+background-color: yellow;
+margin: 0;
+border: 1px solid;
+border-color: red;
+padding: .5em;
+}
+a {
+text-decoration : none;
+}
+div{
+display : none;
+}
+
+</style>
+
+<script>
+	function show(){
+		//div 요소로 접근
+		//변수 선언 방법 : var a; let a; const a
+		var vdiv = document.querySelector('div');
+		vdiv.style.display = "block";
+	}
+	function hide(){
+		var vdiv = document.querySelector('div');
+		vdiv.style.display = "hidden";
+		
+	}
+</script>
+</head>
+
+
+
+<body>
+
+	<ul>
+		<li>홈으로</li>
+		<li>공지사항</li>
+		<li>오시는 길</li>
+		<li>제품 소개</li>
+		<li>질문과 대답</li>
+	</ul>
+
+	<pre>
+	🤗 작성팁 🤗 
+	
+	변수 선언 방법 : var a; let a; const a
+	=> 	var a = 10;  
+		a = 123.456 -> 숫자형이면 다 가능인듯
+		
+		var, let => 데이터 변경 가능
+		const => 변경 불가능
+	</pre>
+
+	<pre>
+	ul#u2
+	{
+	border-left: none;	//좌측 테두리 없게
+	border-right: none;	//우측 테두리 없게
+	}
+	
+	#u2 li{
+	/* border : 2px double pink; */
+	display : inline;
+	margin : 20px;
+	padding : 7px;
+	letter-spacing: 5px;	//자간
+	}
+	</pre>
+	
+	<ul id="u2">
+		<li>홈으로</li>
+		<li>공지사항</li>
+		<li>오시는 길</li>
+		<li>제품 소개</li>
+		<li>질문과 대답</li>
+	</ul>
+	
+	<pre>
+	.menubar li{
+	display: inline;
+	background-color: yellow;
+	margin: 0;
+	border: 1px solid;
+	border-color: red;
+	padding: .5em;
+	}
+	a {
+	text-decoration : none;
+	}
+	</pre>
+	확인버튼 클릭하면 메뉴 등장
+	<input type = "button" value="확인" onclick="show()">
+	<input type = "button" value="숨김" onclick="hide()">
+	<div>
+	<ul class="menubar">
+	    <li><a href="#">홈으로</a></li>
+	    <li><a href="#">회사 소개</a></li>
+	    <li><a href="#">제품 소개</a></li>
+	    <li><a href="#">질문과 대답</a></li>
+	    <li><a href="#">연락처</a></li>
+	</ul>
+	</div>
+
+
+</body>
+
+
+
+</html>

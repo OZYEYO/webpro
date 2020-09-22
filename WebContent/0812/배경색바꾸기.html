@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+<!-- 
+<style>
+	#clear{
+	display : none;
+	}
+</style>
+ -->
+ 
+ <script>
+	window.onload = function(){
+		document.querySelector("#clear").style.display = "none";
+
+	}
+	
+	
+	
+	//확인 버튼 클릭할 ㄸㅐ ㅣ 확인버튼은 안 보이게 종료버튼은 보이게
+	function proc1(change){
+		ok.style.display = "inline";
+		clear.style.dislay = "none";
+		ok = change;
+		
+		result1 = document.body;	//배경색
+		
+		a = setInterval(function(){
+			
+			cr = Math.floor(Math.random()*255);
+			cg = Math.floor(Math.random()*255);
+			cb = Math.floor(Math.random()*255);
+
+			result1.style.backgroundColor = "rgb("+cr+"," +cg+ ","+cb+")";
+		
+		},100)
+	}
+	
+	function proc2(){
+		ok.style.display = "none";
+		clear.style.display = "inline";
+		clearInterval(a);
+	}
+</script>
+</head>
+<body>
+
+<div class="box">
+		<h3>1. 1초에 한번씩 배경색 바꾸기</h3>
+		
+		종료버튼 만들기: 처음 실행시 보이지 않게 설정<br>
+		확인 버튼 클릭시 배경색 바꾸기가 실행되고 종료버튼이 보여진다.
+		<br><br>
+		<input id="ok" type="button" value="확인" onclick="proc1(this)"> <br> <br>
+		<input id="clear" type="button" value="종료" onclick="proc2()"> <br> <br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

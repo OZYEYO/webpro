@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+<script>
+	function proc1(){
+		//원하는 숫자의 구구단을 출력
+		
+		res="";
+		while(true){
+			num = prompt("원하는 단을 입력하세요.");
+			res += "<br>***" + num + "단***<br>"
+			
+			for(i=1; i<=9; i++){
+				res += num + "*" + i + "=" + num*i + "<br>";
+			}
+			document.querySelector('#result1').innerHTML = res;
+			
+			//다른 단 출력 하실?
+			yn = confirm("다른 단을 출력하시겠습니까? 🤡")
+			
+			if(yn==false){ // => !yn
+				break;
+			}
+		}
+	}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+		<h3>1. confirm함수</h3>
+		- 사용자의 질문에 답변하는 함수<br>
+		- return 값은  T/F <br>
+		<br><br>
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+<script>
+function proc1(){
+	birthday = new Date(1997, 9, 2);
+	today = new Date();
+	
+	live = today.getTime() - birthday.getTime();
+
+	res = "살아온 밀리세컨 : " + live +"<br>";
+	res += "살아온 초 : " +Math.floor(live/1000) + "<br>";
+	res += "살아온 분 : " +Math.floor((live/1000)/60) + "<br>";
+	res += "살아온 시간 : "+Math.floor(((live/1000)/60)/60) + "<br>";
+	res += "살아온 일 : " +Math.floor((((live/1000)/60)/60)/24) + "<br>";
+	res += "살아온 달 : " +Math.floor((((live/1000)/60)/60/24)/30) + "<br>";
+	res += "살아온 해 : " +Math.floor(((((live/1000)/60)/60/24)/30)/12) + "<br>";
+	
+	document.querySelector('#result1').innerHTML = res;
+}
+
+function proc2(){
+	//오늘 날짜 생성
+	today = new Date();
+	
+	//100일을 밀리세컨드로 환산
+	day100 = new Date(100*1000*60*60*24);
+
+	//오늘 밀리세컨드 + 100일치 밀리세컨드 한 값을 인자값으로 갖는 date객체 생성
+	nday = new Date(today.getTime() + day100.getTime());
+	
+	//nday 출력
+	document.querySelector('#result2').innerHTML = nday;
+}
+
+function proc3(){
+	//오늘 날짜 생성
+	today = new Date();
+	//크리스마스날짜
+	merry = new Date(2020, 11, 25);
+	
+	christmas =merry.getTime()-today.getTime();
+	//christmas = new Date(merry.getTime(merry/1000/60/60/24) - today.getTime(today/merry/1000/60/60/24)) + "<br>";
+	cm = Math.floor(christmas/1000/60/60/24);
+	document.querySelector('#result3').innerHTML = "🎄 "+cm + "일 🎅";
+}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+		<h3>1. 경과시간</h3>
+		- 태어난 날부터 현재까지 며칠인지 구하기<br>
+		birthday = new Date("태어난 날");<br>
+		today  = new Date() : 현재 오늘 날짜 
+		<br><br>
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+		<div id="result1"></div>
+	</div>
+
+<div class="box">
+		<h3>2. 경과시간</h3>
+		- 오늘부터 100일이 경과된 시간 구하기<br>
+		- today = new Date()<br>
+		- 100일의millesec값 구하기<br>
+		- today.getTime() + 100일의 밀리세컨
+		<br><br>
+		<input type="button" value="확인" onclick="proc2()"> <br> <br>
+		<div id="result2"></div>
+	</div>
+
+<div class="box">
+		<h3>3. 크리스마스까지 며칠남앗냐</h3>
+		
+		<br><br>
+		<input type="button" value="확인" onclick="proc3()"><br> <br>
+		<div id="result3"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = stylesheet" href = "../css/public.css"></link>
+<style>
+
+iframe{
+width : 500px;
+height : 500px;
+border : 2px double gray;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<pre>
+<작성 팁>
+iframe : 웹피이지 안에서 다른 웹 페이지를 표시하고자 할 떄 사용
+
+a 링크 태그에서 target속성값으로 iframe의 name을 이용하여 다른 html문서를 삽입할 수 있다
+
+&lt;iframe src="../웹 커피.html" name = "ifr"&gt;
+&lt;a href = "../아메리카노.html" target="ifr"&gt;아메리카노&lt;/a&gt;
+
+
+</pre>
+
+
+<h1>Hello</h1>
+<h2>오 즐 금</h2>
+<a href = "../아메리카노.html" target="ifr">아메리카노</a>
+<a href = "../에스프레소.html" target="ifr">에스프레소</a>
+<a href = "../카페오레.html" target="ifr">카페오레</a>
+<a href = "../카푸치노.html" target="ifr">카푸치노</a>
+
+<br>
+<iframe src="../웹 커피.html" name = "ifr">
+</iframe>
+
+
+</body>
+</html>

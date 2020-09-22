@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+
+<style>
+	#dan{
+		width : 5%;
+		height : 3%;
+	}
+	
+	table{
+		width : 50%;
+		height : 50%;
+		text-align : center;
+	}
+</style>
+
+
+<script>
+
+window.onload = function(){
+	//form에 해당 String저장
+	form = document.ff
+	//input에 커서 깜빡이게
+	form.input.focus();
+	
+}
+	function proc1(){
+		//입력받은(input)value값 갖고와서 변수에 저장 (= 몇단인지 입력받은 거)
+		inputvalue = form.input.value;
+		
+			res = inputvalue +"단"+"\n\n" +	inputvalue + " * 1 = "+inputvalue+"\n";
+		for(i=2; i<=9; i++){
+			res += inputvalue + " * " + i +" = "+ inputvalue*i +"\n";
+		}
+		
+		document.ff.area.value = res;
+		
+		
+	}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+		<h3>1. form 문제 1</h3>
+		
+		다음과 같은 프로그램을 작성하시오. 36_textarea구구단
+		<br><br>
+		<form name = "ff">
+		<table>
+		<tr>
+			<td>
+			<p>
+				<input id="dan" name="input" type="text">단 <input type="button" value="출력" onclick="proc1()">
+			</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<p>
+				<textarea name ="area" cols="25" rows="30" size=10></textarea>
+			</p>
+			</td>
+		</tr>			
+		</form>
+		</table>
+		<br><br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+#tab1{
+width: 600px;
+height: 100px;
+
+}
+
+#tab2{
+width: 600px;
+height: 100px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+//row span : 행 병합
+//columnspan : 열 병합
+<table id="tab1" border ="1">
+	<tr>
+		<th rowspan="2"></th>
+		<th rowspan="2"></th>
+		<th></th>
+		<th></th>
+	</tr>
+	
+	<tr>
+		<td rowspan="4"></td>
+		<td rowspan="2"></td>
+	</tr>
+	
+	<tr>
+		<td rowspan="4"></td>
+		<td rowspan="2", columnspan="2"></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rowspan
+
+
+<table id="tab2" border = "1">
+	<tr>
+		<th columnspan="6"></th>
+	</tr>
+	
+	<tr>
+		<td ></td>
+		<td ></td>
+		<td columnspan ="4"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+	<tr>
+		<td rowspan = "2"></td>
+		<td rowspan = "2"></td>
+		<td columnspan ="4", rowspan = "2"></td>
+		<td rowspan = "2"></td>
+		<td rowspan = "2"></td>
+	</tr>	
+	
+	<tr>
+		<td ></td>
+		<td ></td>
+		<td columnspan ="4"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+	<tr>
+		<td ></td>
+		<td ></td>
+		<td columnspan ="4"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	</table>
+	
+	<!-- -------------------------------- 
+	
+	<tr>
+		<td ></td>
+		<td columnspan ="2"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+	<tr>
+		<td ></td>
+		<td columnspan ="2"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+	<tr>
+		<td ></td>
+		<td columnspan ="2", rowspan="4"></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+	<tr>
+		<td ></td>
+		<td ></td>
+		<td ></td>
+		<td ></td>
+	</tr>
+	
+
+-->
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+<script>
+
+//시작하자마자 실행하기위함
+window.onload = function(){
+	
+	//img태그로 접근, src속성 값을 가져온다.
+	vimg = document.querySelector('img');
+	//이미지의 src(../images/sw_off.png)를 갖구옴
+}
+
+function proc1(){	//클릭할 때 마다 src 바뀌는 거
+	vsrc = vimg.getAttribute('src');	//클릭할 때 마다 바뀐 값 새로 갖고와얗하니까
+	console.log(vsrc);	//클릭할 떄 마다 웹페이지 콘솔 창에 src 바뀌어가며 뜸
+	
+	if(vsrc.match("on") == null){ //on이 없(비어있)으면
+		//현 값 : sw_off.png
+		//src를 sw_on.png로 변경한다.
+		vimg.setAttribute('src', '../images/sw_on.png'); //확장자명까지 대소문자 구분해야햐함
+	}else{	//on이 포함되어있으면 sw_off.png로 변경
+		vimg.setAttribute('src', '../images/sw_off.png');
+	}
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+		<h3>1. 이미지 변경</h3>
+		sw_on.png와 sw_off.png를 번갈ㄹ아 변경한다<br>
+		match(키워드) :  해당 검색문자가 있으면 검색 문잘를 배열로 return한다.<br>
+		없으면 null을 return 한다.<br>
+		src속성의 값을 가져온다 - getAttribute('src')
+		<br><br>
+		<div id="result1">
+			<img onclick="proc1()" src ="../images/sw_off.png" alt="">
+		</div>
+	</div>
+</body>
+</html>

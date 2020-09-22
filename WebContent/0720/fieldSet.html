@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="styleesheet" href="../css/public.css">
+<style>
+
+*{
+font-size =1.2em;
+}
+
+
+fieldset{
+width : 80%
+}
+
+label{
+display:inline-block;
+width:100px;
+height:40px;
+}
+
+#field1, #field2{
+border : 2px solid blue;
+padding : 10px;
+}
+</style>
+</head>
+
+<body>
+
+<pre style = "background: yellow">
+작성팁😔
+fieldset : 입력 항목들의 그룹핑
+legend : fieldset의 제목
+label : 일반 문자, 문자의 길이를 같게 하기 위해서 사용
+	- label 요소가 인라인 요소이기 때문에
+	display : inline-block을 사용해야 한다.
+</pre>
+
+	<form>
+		<fieldset>
+		<legend>인적 사항</legend>
+			<label>이름</label>
+				<input type="text"><br>
+			<label>전번</label>
+				<input type="text"><br>	
+		</fieldset>
+	
+		<br>
+	
+		<fieldset>
+		<legend>경력 사항</legend>
+			<label>이메일</label>
+				<input type = "text"><br>
+			<label>생일</label>
+			<input type = "date"><br>
+		</fieldset>
+	
+	</form>
+	
+	
+	<!-- 과제1 --> 
+	<h1>이메일 전송화면</h1>
+	<form>
+	<fieldset id="field1">
+		<label>이름</label>
+			<input type = "text"><br>
+		<label>이메일</label>		
+			<input type = "email"><br>
+		<label>내용</label><br>
+		<textarea name = "area" rows="10" cols="60"></textarea><br>
+		<input type = "submit" value= "전송">
+		<input type="reset" value = "재설정">
+	</fieldset>
+	</form>
+	
+	<!-- 과제2 -->	
+	<form>
+	<h1>회원 가입 화면</h1>
+	<fieldset id="field2">
+		<label>이름</label>
+			<input type = "text"><br>
+		<label>주소</label>
+			<input type = "text"><br>
+		<label>이메일</label>		
+			<input type = "email"><br>
+		<input type="radio" value = "Male" name="gender">Male<br>
+		<input type="radio" value = "Female" name="gender">Female<br>
+		<input type = "submit" value= "Send">
+		<input type="reset" value = "원래대로">
+	</form>
+</body>
+
+</html>

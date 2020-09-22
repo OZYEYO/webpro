@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+
+<script>
+arr=["사과", "복숭아", "참외", "수박", "포도", "복숭아", "바나나", "사과", "자두"]
+	
+	function proc1(){
+		//시작위치 입력
+		start = prompt("시작할 idx번호를 입력하세요");
+		//끝위치 입력
+		end = prompt("종료할 idx번호를 입력하세요");
+	
+		res = "원래 배열 "+arr+"<br>"
+		aa = arr.slice(start, end);
+		res += "추출 요소 (" + start+", "+end +") : "+ aa + "<br>";
+		
+		//출력하시오
+		document.querySelector('#result1').innerHTML = res;
+	}
+	
+	function proc2(){
+		res = "원래 배열 : "+arr+"<br>";
+		
+		//2번째 위치에서 한개를 삭제하고  파내플 체리 추가
+		arr.splice(2, 1, "파인애플", "체리")
+		
+		res += 'splice(2, 1, "파인애플", "체리") : ' + arr;
+		
+		document.querySelector('#result2').innerHTML = res;
+		
+	}
+	
+	function proc3(){
+		var arr=[1,2,3,4,5]
+		
+		res = "arr : "+ arr+"<br>";
+		res += "window.arr : " + window.arr+"<br>";
+		
+		aa = arr.concat(window.arr);
+		
+		res += "arr.length"+arr.length +"<br>";
+		res += "window.arr.length" + window.arr.length + "<br>";
+		res += "합친 배열 aa.length" + aa.length;
+//		arr.concat(window.arr);	//전역변수 arr부르고싶으면 window. 으로 선언하면 됨
+		document.querySelector('#result3').innerHTML = res;
+	}
+	
+	function proc4(){
+		res = "arr : "+arr+"<br>";
+		res +="arr.length" + arr.length + "<br>";
+		
+		for(i =0; i<arr.length; i++){
+			res += arr[i] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+		}
+		
+		res += "<br>";
+		
+
+		aa = arr.join("/");
+		res += "aa : "+aa+"<br>";
+		res += "aa.join(/).length"+aa.length+"<br>";
+
+		for(i =0; i<aa.length; i++){
+			res += aa[i] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+		}
+		
+		document.querySelector('#result4').innerHTML = res;
+	}
+
+	function proc5(){
+		res = "원래 배열: "+arr+"<br>";
+		arr.reverse();
+		res += "arr.reverse() : "+ arr;
+		document.querySelector('#result5 ').innerHTML = res;
+	}
+	
+	function proc6(){
+		arr = [234, 21, 150, 11, 55, 501];
+		res = "원래 배열 : "+arr+"<br>";
+		
+		arr.sort();
+		
+		res += "arr.sort() : "+ arr + "<br>";
+		
+		document.querySelector('#result6').innerHTML = res;
+	}
+	
+	function proc7(){
+		arr = [234, 21, 150, 11, 55, 501];
+		res = "원래 배열: "+arr+"<br>";
+		
+		arr.sort(function(a, b){
+			//연산 후의 값이 양수이면 자리수가 바뀐다.
+			return a-b;
+		})
+		res +="arr.sort() : " + arr + "<br>";
+		document.querySelector('#result7').innerHTML = res;
+	}
+
+	function proc8(){
+		arr = [234, 21, 150, 11, 55, 501];
+		res = "원래 배열: "+arr+"<br>";
+		
+		arr.sort(function(a, b){
+			//연산 후의 값이 양수이면 자리수가 바뀐다.
+			return b-a;
+		})
+		res +="arr.sort() : " + arr + "<br>";
+		document.querySelector('#result8').innerHTML = res;
+	}
+	
+</script>
+
+</head>
+<body>
+
+
+
+
+<div class="box">
+		<h3>1. slice/splice</h3>
+		- slice(start, end) : start ~ end -1까지의 요소들을 추출 <br>
+		- splice(idx, n, a, b, c) ; index위치에서 n개를 삭제하고 a,b,c요쇼ㅗ를 추가
+		<br><br>
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+		<input type="button" value="확인" onclick="proc2()"> <br> <br>
+		<div id="result1"></div>
+		<div id="result2"></div>
+	</div>
+
+<div class="box">
+		<h3>2. concat/join/reverse </h3>
+		- a.concat(b, c,...) : 여러개의 배열 요소를 한개의 배열로 합친다<br>
+		- a.join() : 한개의 배열요소를 하나의 문자열로 변환한다.<br>
+		- a.reverse() : a배열의 순서를 뒤집기<br>
+		<br><br>
+		<input type="button" value="확인" onclick="proc3()"> <br> <br>
+		<input type="button" value="확인" onclick="proc4()"> <br> <br>
+		<input type="button" value="Reverse" onclick="proc5()"> <br> <br>
+		<div id="result3"></div>
+		<div id="result4"></div>
+		<div id="result5"></div>
+	</div>
+
+<div class="box">
+		<h3>3. sort </h3>
+		arr = [234, 21, 150, 11, 55, 501] <br>
+		- a.sort() : 11 150 21 234 501 55<br>
+			* 앞자리부터 순서대로 정렬함.  1 -> 2 -> 3,...
+		- ASC : 11 21 55 150 234 501
+		- DESC : 501 234 150 55 21 11 
+		<br><br>
+		<input type="button" value="sort" onclick="proc6()"> <br> <br>
+		<input type="button" value="ASC" onclick="proc7()"> <br> <br>
+		<input type="button" value="DESC" onclick="proc8()"> <br> <br>
+		<div id="result6"></div>
+		<div id="result7"></div>
+		<div id="result8"></div>
+	</div>
+</body>
+</html>

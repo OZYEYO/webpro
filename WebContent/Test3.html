@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>
+		ㅇㄻㄴㄹ
+		</title>
+		<meta charset = "UTF -8">
+		<style>
+			body{
+				<!--margin : 50px AUTO;-->
+				/*
+				margin : 100px;
+				margin : 100px 200px; <!--Top, Bottom=100 / L, r =200 -->
+				margin : 50px 100px 30px;<!-- T=50 / R,L=100 / B=30 -->
+				margin : 20px 500px 100px 30px<!-- T, R, B, L 순서 -->
+				*/
+			}
+			img{
+				display : block;
+				width = 300px;
+				height = 200px;
+				margin-top = 50px auto;
+			}
+			h1{
+				color : skyblue;
+				width : 50%;
+				background : yellow;
+				margin : 50px auto;
+			}
+			em{
+				margin : 50px AUTO;
+				color : green;
+				font-size : 20px;
+			}
+			span{
+				margin : 50px AUTO;
+				background-color : skyblue;
+				color : white;
+			}
+			p{
+				margin : 50px AUTO;
+				width :50%;
+			}
+			h2{
+				width: 50%;
+				margin  : 50px auto;
+			}
+			div{
+				width: 50%;
+				margin  : 5px auto;
+			}
+			pre{
+				background : lightgreen;
+				border :  8px double green; 
+				<!--border-top 이런 식으로도 가능-->
+				<!-- solid 대신
+				double = 이중선
+				inset = 액자처럼 명암 들어감
+				outset = 걍 inset랑 명암 들어간 위치 차이
+				dotted = 점선테두리 
+				dashed = 점선보다 좀 더 김zz -->
+			}
+			hr{
+				border : 3px dotted yellow;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<pre>
+		* pre태그를 이용하면 입력한 그대로 모양이 출력된다
+		
+		<<작성 팁>>
+		  - ' &lt;em&gt; ' 태그 : 기울임 효과
+		  - strong 태그 : Bold의 효과
+		  - span 태그 : 일부분의 문자를 선택
+		  - div 태그 : 내가 원하는 요소(태그)끼리만 묶어서 처리함
+		  
+		  * 스타일
+			color
+			background-color
+			margin
+			font-size
+			font-weight
+			width
+			height
+			display
+			
+		  * 주석처리
+			- style쪽에서는 /**/를 사용하고
+			- body 내에선 <!-- -->를 사용
+		</pre>
+	
+	<body>
+	
+	<hr color = skyblue>
+		<h1>Welcome to the Dongmakgol</h1>
+		<div>
+			<img src = "images/cloud03.jpg">
+			<img src = "images/카푸치노.jpg"><br>
+		</div>
+		<p> 구름zz&nbsp;zzz&nbsp; <sub>시바견</sub>
+			<em>ㅕㅇ기쓰면 기울여져 <sup>ㅇㅎㅎㅇㅎㅇ</sup></em>
+		</p>
+		
+		<h2>내ㅐ용</h2>
+		<p>HTM. <strong>CSS. JavaScript</strong>, <span>JAVA</span>, DB, <mark>jQuery</mark>, Spring </p>
+	</body>
+</html>
+

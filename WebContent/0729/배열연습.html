@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+
+<script>
+	function proc1(){
+		person = new Array()
+		
+		while(true){
+		a = prompt("이름을 입력해주세요. 확인 or 취소 클릭 시 종료됩니다.");
+		
+		if(a == null || a==""){
+			break;
+		}else{				
+			person.push(a);
+		}
+		}
+		document.querySelector('#result1').innerHTML = person;
+	}
+</script>
+
+
+</head>
+<body>
+
+<div class="box">
+		<h3>1. 이름 입력</h3>
+		prompt를 이용ㅎ여 이릅을 입력받는ㄷㅇ<br>
+		입력받은 이름을 배열에 저장한다<br>
+		입력값이 공백이거나 취소버튼을 클릭할 시 프로그램을 종료한다.
+		<br><br>
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+		<div id="result1"></div>
+	</div>
+</body>
+</html>

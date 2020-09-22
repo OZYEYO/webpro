@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+#sendimg{
+width : 50px;
+height : 50px;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<pre>
+type이 동일해야 둘중에 택1 가능 ex) type="radio" <- 이거
+hidden => 안 보이게 햊뮤,,
+</pre>
+
+
+<form action = "input.jsp" method="post">
+아이디: 	<input type = "hidden" value = "">
+이름 : 	<input type="text" name="name"><br>
+전화번호 :	<input type="text" name="tel"><br>
+성별 :	<input type="radio" value = "남자" name="gender"> 남자 
+		<input type="radio" value = "여자" name="gender"> 여자<br>
+
+좋아하는 과일 : 
+		<input type = "checkbox" value="사과" name="fruits"> 사과
+		<input type = "checkbox" value="복숭아" name="fruits"> 복숭아
+		<input type = "checkbox" value="자두" name="fruits"> 자두
+		<input type = "checkbox" value="파인애플" name="fruits"> 파인애플
+		<input type = "checkbox" value="참외" name="fruits"> 참외
+		<input type = "checkbox" value="수박" name="fruits"> 수박<br>
+		
+첨부파일 : 
+		<input type ="file" name="file"><br>
+		
+		<br>
+		- 전송 수행 : input type=image, input type=submit<br>
+		- 일반 버튼 : input type = button <br>
+		<input id = "sendimg" type = "image" src = "../images/뱅쇼.jpg">
+		<input type = "reset" value="취소">
+		<input type = "submit">
+		<input type ="button" value="확인" onclick="alert('ㅎㅇ')">
+		<br>
+		- 전송 수행 button type = submit<br>
+		- 일반 버튼button type="button"<br>
+		<button type ="button" onclick="alert('랑렬')">확인</button>
+		<button type ="submit">전송</button>
+		<button>전송</button>
+		<button type ="reset">취소</button>
+		
+</form>
+</body>
+
+
+</html>

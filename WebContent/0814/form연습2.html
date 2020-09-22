@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+<script>
+	function proc1(){
+		//name을 이용한 값 갖고오기. document.(name).(내부 name).value
+		vname = document.ff.name.value;
+		vgender = document.ff.gender.value;
+		vhobby = document.ff.hobby	//hobby는 여러개니까 밑에서 for문으로
+		// 방법 2 | document.getElememtsByName('name')[0]
+		
+		res ="이름: "+vname +"\n";	//위에 value받아온 거 쓰는거지
+		res +="성별 : "+vgender + "\n";	//textarea에 출력되는 문장엔 줄바꿈 <br>말고 \n 써야함
+		res += "취미 : ";
+		
+		for(i=0; i<vhobby.length; i++){
+			//chkbox 항목 상 선택되어있으면  console에 true출력, unchk돼있으면  F출력
+			// => console.log(vhobby[i].checked);
+			
+			if(vhobby[i].checked){
+				res += vhobby[i].value + " ";
+			}
+		}
+		
+		//출력문. textarea에 출력하는 거
+		document.ff.area.value = res;
+		//form name = (ff)설정 안 했으면( forms. )로 대체 가능
+		
+	}
+</script>
+
+
+</head>
+<body>
+
+<div class="box">
+		<h3>2. form 문제 2</h3>
+		
+		다음과 같은 입력 양식을 만들고 결과를 출ㄹ력하는 프로그램을 작성하시오.<br>
+		(취미가 없을 경우는 "취미가 없군요"를 출력)<br>
+		38_checked_radio
+		
+		<br><br>
+		<form name="ff">
+			이름 :	<input type="text" name="name">
+			<br><br>
+			<!-- name값이 같으면 중복 체크 안되게 해줌! checkbox는 원래 중복 되는거고ㅋㅋ -->
+			성별 : 	<input type="radio" name ="gender" value="남" checked>남 <!-- checked: 체크되어있는 상태.-->
+				  	<input type="radio" name ="gender" value="여">여
+			<br><br>
+			취미 : 	<input type="checkbox" name="hobby" value="여행" checked="checked">최인지여행가자
+					<input type="checkbox" name="hobby" value="독서">독서
+					<input type="checkbox" name="hobby" value="영화감상 ">영화감상
+					<input type="checkbox" name="hobby" value="바둑">바둑
+					<input type="checkbox" name="hobby" value="장기">장기
+					<input type="checkbox" name="hobby" value="등산">등산
+					<input type="checkbox" name="hobby" value="낚시">낚시
+			<br><br>
+					<input type="button" value="결과출력 " onclick="proc1()">
+			<br><br>
+					<textarea name ="area" cols="50" rows="10"></textarea>
+		</form>
+	</div>
+</body>
+</html>

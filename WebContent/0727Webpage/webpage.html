@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href ="../css/mycss.css">
+<style>
+header,nav,section,#left,#right,footer {
+	box-sizing: border-box;
+	float: left;
+}
+
+section,#left,#right {
+	border: 4px solid gray;
+	margin-right: 5px;
+}
+
+header {
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+	width: 100%;
+	height: 130px;
+	background: white;
+	text-align: center;
+}
+
+nav {
+	border-top: 2px solid gray;
+	border-bottom: 4px solid gray;
+	width: 100%;
+	height: 100px;
+	background: white;
+	text-align: center;
+}
+
+.navec {
+	font-size: 20px;
+	font-style: normal;
+	text-align: center;
+	margin: 15px 50px;
+	color: black;
+	display: inline-block;
+	list-style-type: none;
+}
+
+#mustit {
+	padding-top: 5px;
+	width: 20%;
+	height: 110px;
+}
+
+#left {
+	margin-top: 5px;
+	background: white;
+	text-align: center;
+	width: calc(15% - 1%);
+	height: 620px;
+	padding: 10px;
+	margin-left: 25px;
+}
+
+#cate {
+  margin-top:30px;
+  border : 2px solid black;
+  color: black;
+  height: 85%
+ 
+}
+
+.leftli {
+	border-bottom: 4px solid gray;
+	font-size: 25px;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	height :80px;
+	width : 80%;
+	padding-top : 10px;
+	list-style-type: none;
+}
+
+section {
+	margin-top: 5px;
+	width: calc(65% - 1%);
+	height: 620px;
+}
+a:link{
+  color : black;
+ }
+a:visited{
+  color : black;
+}
+iframe {
+	width: 100%;
+	height: 610px;
+	border: none;
+}
+
+#right {
+	margin-top: 5px;
+	width: calc(20% - 1%);
+	height: 620px;
+	padding-left: 30px;
+	padding-top: 100px;
+}
+
+footer {
+
+	width: 100%;
+	height: 60px;
+	clear: both;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#log2{
+ width: 90%;
+}
+
+</style>
+</head>
+<body>
+ <header>
+  <img id = "mustit" src = "./image/mustit.JPG">
+ </header>
+ <nav>
+ <ul id ="navul">
+  <li class = "navec"><a target = "ifr" href = "home.html">HOME</a></li>
+  <li class = "navec"><a target = "ifr" href= "about.html">SHOPPING ABOUT</a></li>
+  <li class = "navec"><a target = "ifr" href = "news.html">NEWS</a></li>
+  <li class = "navec"><a target = "ifr" href = "page.html">MY ACCOUNT</a></li>
+  <li class = "navec"><a target = "ifr" href = "content.html">CONTACTS</a></li>
+  </ul>
+ </nav>
+ <aside id = "left">
+  <h1>카테고리</h1>
+  <ul id = "cate">
+   <li class = "leftli"><a target = "ifr" href = "girl.html">여성</a></li>
+   <li class = "leftli"><a target = "ifr" href = "men.html">남성</a></li>
+   <li class = "leftli"><a target = "ifr" href = "kids.html">키즈</a></li>
+   <li class = "leftli"><a target = "ifr" href = "life.html">라이프</a></li>
+   <li class = "leftli"><a target = "ifr" href = "hot.html">핫딜</a></li> 
+ 
+  </ul>
+ </aside>
+ <section>
+  <iframe src = "./image/main.JPG" name = "ifr"></iframe>
+ 
+ </section>
+ <aside id = "right">
+ <h4>머스트잇에 오신 것을 환영합니다!</h4>
+ <h2>Shopping Cart</h2>
+        <a href="shoppingcart.html" target="ifr">장바구니</a>
+        <br>
+        <br>	
+        <br>
+        <br>
+        <form>
+            <h2>LogIn</h2>
+            <label>아이디</label><br>
+            <input type="text" name="id"><br>
+            <label>비밀번호</label><br>
+            <input type="password" name="pw"><br>
+            <h5>------------ 간편 로그인 ------------</h5>
+            <img id = "log2" src="./image/login.JPG">
+            <br>
+            <button type="submit">로그인</button>
+            <button><a href ="join.html">회원가입</a></button>
+            <br>
+            
+        </form>
+ </aside>
+ 
+<footer>
+<h3>(주)머스트잇</h3>
+</footer>
+ 
+
+
+</body>
+</html>

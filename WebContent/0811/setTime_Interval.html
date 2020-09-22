@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/public.css">
+
+<script>
+function proc1(){
+	result1 = document.querySelector('#result1');
+	
+	setTimeout(function(){
+		result1.style.backgroundColor = "skyblue";		
+	}, 500); 	//0.5초가 지나면 function 수행
+}
+
+function proc2(but){	//but = 밑에 box에서 this를 받은 변수 = 클릭한 버튼의 객체
+
+	but.style.display = "none";
+	ok = but;	// var ok = but; 으로 하면 지역변수라서 proc3()(=타 메소드)에서 ok 못 쓰는데
+	//var없으니까 전역변수라ㅋㅋ 타 메소드에서 사용 ㄱㅏ능
+	
+	//result2의 요소 검색
+	result2 = document.getElementById('result2');
+	
+	a = setInterval(function(){
+		cr = Math.floor(Math.random()*255);
+		cg = Math.floor(Math.random()*255);
+		cb = Math.floor(Math.random()*255);
+		
+		/*	색상 설정 방법
+		
+			1. red, green, blue
+			2. rgb(200, 198, 124)
+			3. rggb(20%, 100%, 89%)
+			4. #ff1D4E		cr.toString(16)<- 16진스로 바꾸는 거
+		*/
+		
+		//result2.style.backgroundColor = "rgb("+cr+","+cg+","+cb+")";
+		result2.style.backgroundColor = `rgb(${cr},${cg},${cb})`; // ( `` ) => 백틱을 사용하는 탬플릿 리터럴
+	},500)
+	
+	console.log(a);
+	
+}
+
+function proc3(){
+	ok.style.display = "inline";
+	clearInterval(a);
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+		<h3>1. setTimeout</h3>
+		
+		setTimeout(code, millisec) : 지정된 ms가 경과하면 code를 실행하고 종료한다.<br>
+		확인버튼을 클릭하면 result의 배경색을 변경한다.<br>
+		<br><br>
+		<input type="button" value="확인" onclick="proc1()"> <br> <br>
+		<div id="result1"></div>
+	</div>
+
+<div class="box">
+		<h3>2. setTimeout</h3>
+		
+		변수 = setTimeout(code, millisec) : 지정된 ms가 경과할 때 마다 code를 실행하고 종료한다.<br>
+		clearInterval(변수) :  setInteval의 수행 기능을 종료한다.<br>
+		확인버튼을 클릭하면 result의 배경색을 변경한다.<br>
+		<br><br>
+		<input type="button" value="확인" onclick="proc2(this)">
+		<input type="button" value="종료" onclick="proc3()"> <br><br>
+		<div id="result2"></div>
+	</div>
+</body>
+</html>

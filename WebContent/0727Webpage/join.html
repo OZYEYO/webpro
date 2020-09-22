@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+ label{
+     width : 80px;
+     height : 20px;
+     display :inline-block; 
+ }
+ 
+ #table{
+    margin :20px auto;
+    border : 2px solid blue;
+    height : auto;
+    width: 40%;
+    padding: 30px;
+    
+ }
+ 
+ h1{
+    text-align: center; 
+ }
+ 
+
+
+
+</style>
+</head>
+<body>
+<h1> 회원 가입 화면 </h1>
+  <div id = "table">
+	<form name = "ff" action="label_test.jsp" method = "post">
+		<label>이름</label><input type = "text" name = "name" value = "이름"><br><br>
+		<label>주소</label><input type = "text" name = "addr" value = "address"><br><br>
+		<label>이메일</label><input type = "text" name = "email" value = "e-mail"><br><br>
+		<input type = "radio" name = "gender" value = "남자">Male<br><br>
+		<input type = "radio" name = "gender" value = "여자">Female<br><br>
+		
+		<br>
+		
+	
+		<input type = "submit" value = "Send">
+		<input type = "reset" value = "원래대로">
+    </form>
+  </div>
+</body>
+</html>

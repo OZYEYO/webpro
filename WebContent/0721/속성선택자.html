@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+
+<style>
+pre{
+padding:10px;
+}
+p{
+font-size: 1.2em
+}
+p[class=pp]{
+color:blue;
+}
+span[class=pp]{
+fint-size:1.2em;
+font-weight: 14px;
+}
+Strong{
+font-size: 1.2em;
+}
+p[id=p4]{
+background : #E5A845;
+}
+p[title=무궁화1]{
+border: 2px double skyblue;
+text-align : center;
+}
+p[title]{
+font-style : italic;
+color :purple;
+}
+p[id]{
+text-align : center;
+text-shadow:20px 10px 5px blue;
+}
+
+</style>
+
+</head>
+
+
+<body>
+<pre>
+작성팁 🤐🤐🤐
+
+* 속성 관련 선택
+title: 해당 위치에 커서 올려놨을 때 거기에 노란 메모 뜨는 거ㅋ ㅋ
+
+
+<Strong>.pp</Strong>			| class가 pp인 것 전체
+<Strong>p.pp</Strong>			| p속성을 가진 것 중 class가 pp인 것
+<Strong>p[class=pp]</Strong>	| p속성을 가진 것 중 class가 pp인 것
+<Strong>span.pp</Strong>		| span속성을 가진 것중 class가 pp인 것
+<Strong>span[class=pp]</Strong>	| span속성을 가진 것중 class가 pp인 것 
+<Strong>#p4</Strong>			| id가 p4인 것
+<Strong>p[id=p4]</Strong>		| p속성 중 id가 p4 인 것
+<Strong>p[title=무궁화1]</Strong>	| p속성 중 title이 무궁화1인 것
+<Strong>p[title]</Strong>		| p속성 중 타이틀이 있는 모든 것을 선택
+
+* 글자의 그림자
+text-shadow : x좌표, y좌표, 선명(흐림)도(숫자가 높아질수록 흐림도와 비례), 컬러 
+</pre>
+
+
+
+	<div>
+		<p title="무궁화1" id="p1" >태경이가 잘못했네</p>
+		<p class="pp">무궁화 꽃이 피오씁니다</p>
+		<p title="무궁화2" class="pp">무궁화 꽃이 피오씁니다</p>
+		<p id="p4">매떡 맛있었니 ... ? ( ͡• ͜ʖ ͡• )</p>
+		<p class="pp2">무궁화 꽃이 피오씁니다</p>
+
+		<span class="pp">포도</span>
+		<span>복숭아</span>
+		<span>수박</span>
+
+	</div>
+</body>
+
+
+</html>
